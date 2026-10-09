@@ -16,6 +16,7 @@
 \usepackage[margin=1.6cm]{geometry}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{needspace}
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -56,6 +57,13 @@
   \vspace{0.35em}
   \noindent{\bfseries #1}\\
   #2\hfill{\color{cvaccent}#3}\par
+}
+
+% Título de conocimiento pegado al inicio de su lista.
+\newcommand{\cvskill}[2]{%
+  \Needspace{5\baselineskip}%
+  \noindent{\bfseries\color{cvblue} #1}\hfill{\color{cvaccent} #2}\par
+  \nopagebreak
 }
 
 \begin{document}
@@ -240,7 +248,7 @@ Date of birth: 03/05/1991
 
 \section{Knowledge}
 
-{\bfseries\color{cvblue} Cryptography}\hfill{\color{cvaccent} Expert}
+\cvskill{Cryptography}{Expert}
 
 \begin{itemize}
   \item Expert in applied cryptography: RSA, elliptic-curve Diffie--Hellman (ECDH) and ECDSA, AES, key encapsulation mechanisms (KEM) and post-quantum cryptography with Open Quantum Safe (OQS).
@@ -248,7 +256,7 @@ Date of birth: 03/05/1991
   \item Fully homomorphic encryption (FHE), physical unclonable functions (PUF), quantum random number generators (QRNG) and mTLS. PKCS\#11 HSMs, IPsec with strongSwan and IKEv2, FrodoKEM, SHAKE and XMSS.
 \end{itemize}
 
-{\bfseries\color{cvblue} Networks}\hfill{\color{cvaccent} Expert}
+\cvskill{Networks}{Expert}
 
 \begin{itemize}
   \item Expert in WiFi 5 and WiFi 6, 802.11k/v access-point steering, and the WiFi subsystem of access points.
@@ -260,7 +268,7 @@ Date of birth: 03/05/1991
   \item FPGA offload of cryptographic datapath operations to accelerate cryptographic processing.
 \end{itemize}
 
-{\bfseries\color{cvblue} SoC and embedded}\hfill{\color{cvaccent} Expert}
+\cvskill{SoC and embedded}{Expert}
 
 \begin{itemize}
   \item Expert in system-on-chip platforms, including MIPS32 and PowerPC: assembler, memory hierarchy (stack, heap, data, text), microprocessor internals and DMA peripherals.
@@ -272,7 +280,7 @@ Date of birth: 03/05/1991
   \item Toolchains and native compilation of the kernel and GCC for certification builds on ARM, ARM64, AMD64 and PowerPC.
 \end{itemize}
 
-{\bfseries\color{cvblue} Linux kernel}\hfill{\color{cvaccent} Expert}
+\cvskill{Linux kernel}{Expert}
 
 \begin{itemize}
   \item Expert in the Linux kernel: process model, POSIX multi-threading, ioctl and netlink, and maintenance of in-kernel WiFi modules.
@@ -287,7 +295,7 @@ Date of birth: 03/05/1991
   \item Shell and boot environment around the kernel: Bash, System V services, SSH and tunneling.
 \end{itemize}
 
-{\bfseries\color{cvblue} Virtualization}\hfill{\color{cvaccent} Expert}
+\cvskill{Virtualization}{Expert}
 
 \begin{itemize}
   \item QEMU/KVM and VirtualBox hypervisors, Docker and Podman containers, and Kubernetes as a container orchestrator.
@@ -299,7 +307,7 @@ Date of birth: 03/05/1991
   \item Air-gapped build and runtime environments, including local package registries.
 \end{itemize}
 
-{\bfseries\color{cvblue} Databases}\hfill{\color{cvaccent} Expert}
+\cvskill{Databases}{Expert}
 
 \begin{itemize}
   \item Expert in relational databases, including PostgreSQL: SQL DDL and DML, schema design, table triggers, and roles for authorization.
@@ -307,7 +315,7 @@ Date of birth: 03/05/1991
   \item Oracle and PL/SQL. Non-relational stores: MongoDB, Redis, Cassandra, Firebase and Kibana.
 \end{itemize}
 
-{\bfseries\color{cvblue} Web technologies}\hfill{\color{cvaccent} Expert}
+\cvskill{Web technologies}{Expert}
 
 \begin{itemize}
   \item Server-side development with Spring Boot, JPA and Maven, and client-side HTML, CSS, the DOM, JavaScript, jQuery and Bootstrap.
@@ -320,7 +328,15 @@ Date of birth: 03/05/1991
   \item Embedded-browser tuning for GPU-accelerated video decoding and correct GPU offload in the browser.
 \end{itemize}
 
-{\bfseries\color{cvblue} Systems and robotics}\hfill{\color{cvaccent} Medium}
+\cvskill{Graphics}{Advanced}
+
+\begin{itemize}
+  \item OpenGL 3.3 and GLSL, and Qt visualization with DAN and CUDA.
+  \item Signal, image and sound processing with OpenCV and FFmpeg.
+  \item GPU-accelerated H.264 video decoding in the browser for embedded HMI, using Intel GPUs and libva.
+\end{itemize}
+
+\cvskill{Systems and robotics}{Medium}
 
 \begin{itemize}
   \item Cybersecurity: iptables, honeypots, Kali Linux with the Metasploit framework, and forensic analysis.
@@ -329,22 +345,14 @@ Date of birth: 03/05/1991
   \item Software testing with SonarQube, GTest and code-coverage measurement. Python, including the C-API.
 \end{itemize}
 
-{\bfseries\color{cvblue} Cloud and data}\hfill{\color{cvaccent} Basic}
+\cvskill{Cloud and data}{Basic}
 
 \begin{itemize}
   \item AWS: EC2 for clustering and high availability, load balancers ELB, DNS with Route 53, RDS and S3.
   \item Git, GitLab CI, Jenkins, SVN and Travis CI.
 \end{itemize}
 
-{\bfseries\color{cvblue} Graphics}\hfill{\color{cvaccent} Advanced}
-
-\begin{itemize}
-  \item OpenGL 3.3 and GLSL, and Qt visualization with DAN and CUDA.
-  \item Signal, image and sound processing with OpenCV and FFmpeg.
-  \item GPU-accelerated H.264 video decoding in the browser for embedded HMI, using Intel GPUs and libva.
-\end{itemize}
-
-{\bfseries\color{cvblue} Multi-platform applications}\hfill{\color{cvaccent} Basic}
+\cvskill{Multi-platform applications}{Basic}
 
 \begin{itemize}
   \item Android application development with Android Studio and Gradle.
@@ -352,7 +360,7 @@ Date of birth: 03/05/1991
 
 \section{Languages}
 
-English --- intermediate skills, TOEIC certification B1.
+English --- intermediate skills, TOEIC certification B1.2
 
 \section{Personal Achievements}
 
