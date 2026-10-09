@@ -1,0 +1,252 @@
+% CV de Francisco Javier Gutiérrez-Maturana Sánchez
+% Compilar con: pdflatex CV_FJGMS_INDRA.tex
+%
+% Cómo editarlo:
+%   Datos personales  -> bloque "Datos personales"
+%   Un empleo         -> un entorno job{empresa}{fechas}{puesto}
+%   Un apartado       -> \cvsection{Nombre}
+% El texto reproduce el PDF original.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{array}
+
+\definecolor{cvblue}{HTML}{1B3A4B}
+\definecolor{cvaccent}{HTML}{2F6F8F}
+\definecolor{cvmuted}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cvaccent,
+  linkcolor=cvblue
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=1.15em, itemsep=0.15em, topsep=0.25em, parsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{cvblue}}
+  {}{0pt}{}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{1.15em}{0.55em}
+
+% job{empresa}{fechas}{puesto}
+\newenvironment{job}[3]{%
+  \vspace{0.55em}%
+  \noindent{\bfseries #1}\hfill{\color{cvaccent}#2}\\[0.1em]
+  \textit{#3}\par
+  \begin{itemize}
+}{%
+  \end{itemize}
+}
+
+\newcommand{\edu}[3]{%
+  \vspace{0.35em}
+  \noindent{\bfseries #1}\\
+  #2\hfill{\color{cvaccent}#3}\par
+}
+
+\begin{document}
+
+% ---------- Datos personales ----------
+{\LARGE\bfseries\color{cvblue} Francisco Javier Gutiérrez-Maturana Sánchez}
+
+\vspace{0.35em}
+{\color{cvmuted}
+\href{mailto:fj.gutierrezs91@gmail.com}{fj.gutierrezs91@gmail.com}
+\quad\textbar\quad
++34 683 119 779
+\quad\textbar\quad
+Spain
+\quad\textbar\quad
+Date of birth: 03/05/1991
+}
+
+\section{Work Experience}
+
+\begin{job}{Consultants office's computers Soluciones SI}{}{Business Practice}
+  \item Remote administration of computer equipment and backups with Acronis True Image for Windows systems with NTFS file system.
+  \item Repair of computers and installation of operating systems and optimization.
+  \item Documents and technical procedures inside the business.
+  \item Resolution of technical problems and incidents concerning systems inside the business.
+\end{job}
+
+\begin{job}{Electria Wind}{October 2016 -- March 2017}{Business Practice}
+  \item Debugging the task of an industrial computer PCL in a aerogenerator, with the RSLogix Adam Bradley tool.
+  \item Development of an application in Android Studio to monitor the PLC data in the aerogenerator.
+\end{job}
+
+\begin{job}{Eptisa Service of Engineering Home}{June 2017 -- December 2017}{Developer}
+  \item Develop a smart 4\textsuperscript{o} Generation thermostat in an I+D project.
+  \item Develop Google Cloud service client Datastore with App Engine on Spring Boot and with Maven, use of Java 8.
+  \item Client database NoSQL in real time (Firebase) and an authentication system using Firebase Authentication with JWT.
+  \item Working with Node.js and the framework Node-RED to implement the sensors of the thermostat with Zigbee and algorithms of automatic learning or Machine Learning.
+  \item Use of the API 11 GMS of Google in Android with localization and Geofence services.
+  \item Studying technologies and documentation in English language.
+\end{job}
+
+\begin{job}{Sgenia Industrial}{January 2018 -- August 2018}{System Software Engineer}
+  \item Use of operating system Red Hat Enterprise Workstation 7.4.
+  \item Testing of ITER CODAC 6.0 modules DAN, UDA and SDN.
+  \item Hack of ITER CODAC 6.0 to use an own mass archiving system project based on DAN archiving and UDA Unified Data Access technologies on an IoT I+D development.
+  \item Languages Bash and C/C++, Java and Python.
+  \item Development with PostgreSQL.
+  \item Collaboration with CIEMAT and Indra.
+\end{job}
+
+\begin{job}{Teldat S.A.}{September 2018 -- November 2021}{Network Software Engineer}
+  \item Research about WiFi technologies WiFi 5 and WiFi 6.
+  \item Development of embedded software with SoCs IPQ4019 and IPQ8072 Qualcomm chipsets.
+  \item Testing with Robot Framework and CI with Jenkins and Git.
+  \item Develop algorithms to use access point steering with 802.11k/v WiFi technologies (LBD).
+  \item Maintenance of WiFi modules in the Linux kernel and monitoring and configuration subsystems in userspace C/C++, Qualcomm software.
+  \item Experience in development using Linux kernel 4.4 with ioctl and netlink interfaces.
+  \item Work with Debian distributions for embedded software in access points, from Buster to Jessie.
+  \item Use of Docker and primitive containers with schroot for embedded Debian systems to use in virtual environments.
+\end{job}
+
+\begin{job}{Capgenemi}{November 2021 -- May 2022}{System Software and Database Engineer}
+  \item \textbf{C++}
+  \begin{itemize}
+    \item Development and design of relational databases SQL: Oracle.
+    \item Development and design of non-relational databases, NoSQL: MongoDB, Kibana.
+    \item Testing with C++ GMock and GTest frameworks and regression test environment with EDIFACT messages for airplane traveling agencies.
+    \item Development of Application Payment Service in Amadeus in fraud analysis and 3DS payment security authentication; VISA, Mastercard.
+    \item Use of Git.
+  \end{itemize}
+  \item \textbf{Java}
+  \begin{itemize}
+    \item Use of Java with Maven and Gradle.
+    \item Java 9 lambda programming and design patterns knowledge.
+    \item Use of Spring Boot framework.
+    \item Design of web services and API REST.
+    \item Use of microservices in Java and load balancing for scale web services in high density environments: Netflix framework.
+    \item Java Data Access to DB with ORM frameworks: Hibernate or JPA.
+    \item Use of Java monitors for concurrency applications.
+    \item Use of Git.
+  \end{itemize}
+\end{job}
+
+\begin{job}{Epicom S.A.}{June 2022 -- February 2026}{}
+  \item Designed and implemented internal IPC protocols for confidential systems.
+  \begin{itemize}
+    \item Developed a communication protocol using Unix Domain Sockets, implementing internal parallelization for inter-process communication (IPC).
+    \item Developed a signaling system for reliable communications, separating serial and parallel message processing functionalities.
+  \end{itemize}
+  \item Designed and implemented HSM middleware based on the PKCS\#11 standard, leveraging Botan for cryptographic operations.
+  \begin{itemize}
+    \item Implemented thread-safe multi-threading with advanced signaling and resource contraints to prevent process contention during DoS scenarios.
+    \item Desgined a secure communication pipeline architecture between HSM modules, separating the internal key storage board from the external operations board at the hardware level.
+    \item Designed and implemented HSM core features with independent modules for cryptographic operations and system processing.
+  \end{itemize}
+  \item Architected and developed a high-security Post-Quantum Cryptography (PQC) system, integrating IKEv2 with FrodoKEM for quantum-resistant communications.
+  \begin{itemize}
+    \item Optimized IKEv2 Security Association (SA) negotiation for resource-contrained devies, successfully resolving handshake collisions.
+    \item Resolved criticial reace conditions by optimizing timing windows to ensure reliable IKEv2 collision handling on production systems.
+    \item Conducted performance and stress testing on encrypted data streams using black-box FPGA implementations.
+    \item Developed a Secure Boot implementation in U-Boot, incorporating XMSS-based firmware verification for post-quantum resistance.
+    \item Resolved technical blockers during the device certification process, ensuring compliance with industry security standards.
+    \item Implemented advanced routing protocols using the FRR suite on embedded systems.
+    \item Developed Linux kernel drivers and customized Device Tree Sources (DTS) to enable SFP hot-plug support across I2C, phylink and gianfar drivers.
+    \item Developed and integrated SPI-NOR peripheral drivers for persistend data storage on embedded platforms.
+    \item Implemented custon \texttt{/proc} file system interfaces to manage and access persistent configuration data from user-space.
+    \item Future-proofed legacy systems by resolving Y2038 (Unix Epoch) compliance issues, spearheading the glibc migration from 2.28 to 2.40.
+  \end{itemize}
+  \item Architected and designed optimized system frameworks to enhance performance, scalability, and long-term maintainability.
+  \begin{itemize}
+    \item Authored comprehensive technical desing documentation for propietary hardware to meet rigorous security certification standards.
+    \item Architected standardized frameworks to unify the maintainability of legacy hardware platforms, reducing technical debt across multiple product lines.
+  \end{itemize}
+  \item Implemented secure communication server using TLS v1.3 and Botan 3, leveraging a multi-threaded architecture with Boost.Asio for high-concurrency handling.
+  \begin{itemize}
+    \item Evaluated and selected Open Source technologies based on long term maintainability and community support to ensure system longevity.
+  \end{itemize}
+  \item Developed a modern web application using Next.js and Tailwind CSS, focusing on a responsive and high-performance user interface.
+  \begin{itemize}
+    \item Researching and evaluating cutting-edge web technologies to architect modern, scalable and future-proof digital solutions.
+    \item Developed modern web interfaces using a component-based architecture with React and Next.js.
+    \item Implmented streamlined UI styling using Tailwind CSS, signifacntly reducing CSS bloat and accelerating the development workflow.
+  \end{itemize}
+  \item Spearheaded infrastructure initiatives for the R\&D department, focusing on scalability and high-performance development enviroments:
+  \begin{itemize}
+    \item Implemented automated testing frameworks using Robot Framework to streamline validation for development teams.
+    \item Standardized Red Hat Enterprise Linux (RHEL) as the primary development platform, ensuring high-assurance and reliable environments for defense-grade projects.
+    \item Architected air-gapped development infrastructures, including local NPM registries to enable offline web development in high security enviroments.
+    \item Enforced code quality standars by implementing GitLab commit restrictions and protected branch policies.
+    \item Leveraged Jira to manage complex workflows and strategic objectives, ensuring seamless coordination and tracking across the project lifecycle.
+  \end{itemize}
+\end{job}
+
+\section{Academic Information}
+
+\edu{Technical System and Network Management}
+    {Instituto María Zayas y Soto Mayor, Majadahonda}
+    {2010 -- 2013}
+
+\edu{Graduate in Telematic Engineering}
+    {Universidad Rey Juan Carlos de Madrid}
+    {2013 -- 2017}
+
+\edu{Postgraduate in Computer Science}
+    {Universidad Rey Juan Carlos de Madrid}
+    {2017 -- 2020}
+
+\edu{Curso de criptografía en el CSIC, microcredencial Europea}
+    {}
+    {2025}
+
+\section{Knowledge}
+
+\begin{itemize}
+  \item Development of complex systems multi-threading with POSIX in C and Linux kernel processes. Advanced knowledge in management with shell scripting and boot service System V, remote access with SSH and tunneling, and expert on Bash terminals.
+  \item Advanced knowledge of the TCP/IP protocol stack and the OSI model, knowledge of dynamic routing protocols (OSPF, BGP), setup of static routes, and knowledge of switches, VLANs and STP, link level in general and multicast networks.
+  \item Hardware architecture and development of assembler with microprocessor MIPS32, memory hierarchy and management (stack, heap, data, text), internal structure of the microprocessor and peripherals with DMA. SSE, SSE2, MMX multimedia vectors, Intel architectures, summary on IBM Power architectures.
+  \item Signal theory and image processing, sound and complete domain of the EM spectrum, understanding of modulations AM, FM, PM, spectrograms. Telecommunications architectures, network topologies and different protocol levels in the link: SONET, ATM, satellite systems, radar, WiFi, WiMAX, Ethernet. Signal processing in voice and image.
+  \item Management of cloud systems with AWS instances EC2 for clustering and high availability, load balancers ELB, DNS services with Route 53 and RDS to work with relational database instances, S3 for storage shared between EC2 instances.
+  \item Development with web technologies on both sides: server Spring Boot and client HTML, CSS, DOM tree, JavaScript, jQuery, Bootstrap. Java Data Access to DB with JPA, use of Maven, and advanced Android Studio and Gradle development.
+  \item Version control tools Git and SVN, continuous integration with Travis on GitHub. Docker containers, VirtualBox. MongoDB, PL/SQL, Redis, Cassandra and data analytics on SQL.
+  \item Cybersecurity, firewalls with iptables, honeypots, legacy systems, Kali Linux with the Metasploit framework to exploit system vulnerabilities and forensic analysis.
+  \item Parallel programming with OpenMPI, clustering methods, MapReduce, OpenMP and CUDA GPU computing on HPC.
+  \item Graphics computing with OpenGL 3.3 and GLSL in C++.
+  \item QtCore 5 in C++ and use of DAN and UDA project technologies for data visualization on Qt.
+  \item Soft computing, development of metaheuristics, machine learning multi-classifier and a minimal use of Keras and convolutional networks.
+  \item ROS (Robot Operating System): robotics navigation and image processing with OpenCV and PCL (Point Cloud Library) in C++. OpenCV is also used for DAN and UDA visualization.
+\end{itemize}
+
+\section{Languages}
+
+English --- intermediate skills, TOEIC certification B1.
+
+\section{Personal Achievements}
+
+\begin{itemize}
+  \item RoboCup participation in 2016--2017 with domestic robots, in collaboration with the León college and the URJC in Germany. Development in C++ and ROS of people tracker modules.
+  \item Building a 3D printer.
+  \item IEEE student member.
+  \item University developments and open source contributions: \url{https://github.com/jgmatu}
+\end{itemize}
+
+\section{Personal Interest}
+
+My main objective is to gain working experience and specialise in networking, robotics, computer design, computer vision or systems engineering.
+
+I am a committed and responsible person with a high capacity for adaptation and integration in a working team. I would love to develop in the USA.
+
+Boxing practitioner (1 year): consistent training at the Arganda del Rey Boxing School (2025), developing high physical endurance, discipline and focus.
+
+\section{Availability}
+
+Available to work full-time.
+
+\end{document}
