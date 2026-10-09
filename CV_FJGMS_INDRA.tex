@@ -252,9 +252,12 @@ Date of birth: 03/05/1991
 
 \begin{itemize}
   \item Expert in WiFi 5 and WiFi 6, 802.11k/v access-point steering, and the WiFi subsystem of access points.
+  \item WiFi radio offload and hardware-bridge datapath acceleration, forwarding WiFi interfaces to Ethernet without interrupting the processor and at low latency.
   \item TCP/IP stack and the OSI model, dynamic routing (OSPF, BGP), static routes, switches, VLANs, STP, the link layer and multicast networks.
   \item Link technologies and modulations (AM, FM, PM): Ethernet, WiFi, WiMAX, SONET, ATM, radar and satellite systems.
   \item Railway TRDP with the TCNOpen stack, and the FRR routing suite.
+  \item IPsec with IKEv2, TLS~v1.3, UDP, TCP as a transport protocol, and network queue policies.
+  \item FPGA offload of cryptographic datapath operations to accelerate cryptographic processing.
 \end{itemize}
 
 {\bfseries\color{cvblue} SoC and embedded}\hfill{\color{cvaccent} Expert}
@@ -263,6 +266,7 @@ Date of birth: 03/05/1991
   \item Expert in system-on-chip platforms, including MIPS32 and PowerPC: assembler, memory hierarchy (stack, heap, data, text), microprocessor internals and DMA peripherals.
   \item Intel architectures with SSE, SSE2 and MMX, and embedded Qualcomm SoCs IPQ4019 and IPQ8072.
   \item Embedded Linux on access points, with Debian userspace in C/C++ on those SoCs.
+  \item Boost.Asio with coroutines and the C++20 standard.
   \item FastDDS and POSIX shared memory for video decoding and high-efficiency streams between processes.
   \item U-Boot, including secure boot, on embedded platforms.
   \item Toolchains and native compilation of the kernel and GCC for certification builds on ARM, ARM64, AMD64 and PowerPC.
@@ -272,7 +276,14 @@ Date of birth: 03/05/1991
 
 \begin{itemize}
   \item Expert in the Linux kernel: process model, POSIX multi-threading, ioctl and netlink, and maintenance of in-kernel WiFi modules.
+  \item Semaphores, mutexes and condition variables, and the POSIX library in general.
   \item Kernel drivers and Device Tree Sources (DTS) for I2C, phylink, gianfar and SPI-NOR, plus custom \texttt{/proc} interfaces.
+  \item Kernel modifications for SFP interfaces with phylink on MIPS32 SoCs, for embedded environments and legacy equipment.
+  \item Kernel upgrades from the 4.x series to the 5.x series on embedded systems.
+  \item Kernel debugging with \texttt{printk} and kernel panic analysis.
+  \item Kernel configuration with \texttt{menuconfig} and cross-compilation for multiple architectures.
+  \item System hooks on socket buffers (\texttt{sk\_buff}) and network-protocol manipulation at operating-system level in the Linux kernel.
+  \item Optimization of ARP, IP, TCP, UDP and TLS~v1.3 through kernel \texttt{sysctl} configuration.
   \item Shell and boot environment around the kernel: Bash, System V services, SSH and tunneling.
 \end{itemize}
 
@@ -280,7 +291,12 @@ Date of birth: 03/05/1991
 
 \begin{itemize}
   \item QEMU/KVM and VirtualBox hypervisors, Docker and Podman containers, and Kubernetes as a container orchestrator.
+  \item Load balancers with Kubernetes.
+  \item QEMU emulation of target architectures running cross-compiled operating systems, with fully isolated per-container network stacks over TUN/TAP interfaces.
   \item L2 network segmentation at the hypervisor for isolated guest operating systems and containers, using Linux bridges, network namespaces and cgroups for lightweight isolation.
+  \item Virtualized integration environments on GitLab CI, with Robot Framework end-to-end tests and a virtual TRDP testbed.
+  \item Docker and schroot for embedded Debian userspace on access points.
+  \item Air-gapped build and runtime environments, including local package registries.
 \end{itemize}
 
 {\bfseries\color{cvblue} Databases}\hfill{\color{cvaccent} Expert}
@@ -291,7 +307,7 @@ Date of birth: 03/05/1991
   \item Oracle and PL/SQL. Non-relational stores: MongoDB, Redis, Cassandra, Firebase and Kibana.
 \end{itemize}
 
-{\bfseries\color{cvblue} Web technologies}\hfill{\color{cvaccent} Advanced}
+{\bfseries\color{cvblue} Web technologies}\hfill{\color{cvaccent} Expert}
 
 \begin{itemize}
   \item Server-side development with Spring Boot, JPA and Maven, and client-side HTML, CSS, the DOM, JavaScript, jQuery and Bootstrap.
@@ -299,6 +315,9 @@ Date of birth: 03/05/1991
   \item WebRTC and MediaMTX for video decoding, including RTSP cameras.
   \item Web testing and validation with Selenium and Robot Framework.
   \item Node.js and Node-RED. Service interfaces with REST and SOAP.
+  \item WebSockets to push events to the browser from telemetry and real-time backend processes.
+  \item Browser flag tuning and embedded Chromium kiosk browsers for displaying web user interfaces.
+  \item Embedded-browser tuning for GPU-accelerated video decoding and correct GPU offload in the browser.
 \end{itemize}
 
 {\bfseries\color{cvblue} Systems and robotics}\hfill{\color{cvaccent} Medium}
@@ -317,7 +336,7 @@ Date of birth: 03/05/1991
   \item Git, GitLab CI, Jenkins, SVN and Travis CI.
 \end{itemize}
 
-{\bfseries\color{cvblue} Graphics}\hfill{\color{cvaccent} Basic}
+{\bfseries\color{cvblue} Graphics}\hfill{\color{cvaccent} Advanced}
 
 \begin{itemize}
   \item OpenGL 3.3 and GLSL, and Qt visualization with DAN and CUDA.
