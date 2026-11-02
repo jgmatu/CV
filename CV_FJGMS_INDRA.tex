@@ -256,7 +256,8 @@ Date of birth: 03/05/1991
 \begin{itemize}
   \item Expert in applied cryptography: RSA, elliptic-curve Diffie--Hellman (ECDH) and ECDSA, AES, key encapsulation mechanisms (KEM) and post-quantum cryptography with Open Quantum Safe (OQS).
   \item X.509 certificate generation and digital signatures with RSA, elliptic curves, CRYSTALS-Dilithium and Falcon, using the OpenSSL and Botan 3 cryptographic libraries.
-  \item Fully homomorphic encryption (FHE), physical unclonable functions (PUF), quantum random number generators (QRNG) and mTLS. PKCS\#11 HSMs, IPsec with strongSwan and IKEv2, FrodoKEM, SHAKE and XMSS.
+  \item Fully homomorphic encryption (FHE), physical unclonable functions (PUF), quantum random number generators (QRNG) and mTLS. PKCS\#11 HSMs, IPsec with strongSwan and IKEv2, FrodoKEM, hybrid ML-KEM (X25519/ML-KEM-768 and ML-KEM-1024), Argon2id and SHAKE.
+  \item Secure boot in U-Boot with post-quantum XMSS signatures for firmware signing and verification.
 \end{itemize}
 
 \cvskill{Networks}{Expert}
@@ -277,7 +278,7 @@ Date of birth: 03/05/1991
   \item Expert in system-on-chip platforms, including MIPS32 and PowerPC: assembler, memory hierarchy (stack, heap, data, text), microprocessor internals and DMA peripherals.
   \item Intel architectures with SSE, SSE2 and MMX, and embedded Qualcomm SoCs IPQ4019 and IPQ8072.
   \item Embedded Linux on access points, with Debian userspace in C/C++ on those SoCs.
-  \item Boost.Asio with coroutines and the C++20 standard.
+  \item Boost.Asio with coroutines and the C++20 and C++23 standards.
   \item FastDDS and POSIX shared memory for video decoding and high-efficiency streams between processes.
   \item U-Boot, including secure boot, on embedded platforms.
   \item Toolchains and native compilation of the kernel and GCC for certification builds on ARM, ARM64, AMD64 and PowerPC.
@@ -313,7 +314,7 @@ Date of birth: 03/05/1991
 \cvskill{Databases}{Expert}
 
 \begin{itemize}
-  \item Expert in relational databases, including PostgreSQL: SQL DDL and DML, schema design, table triggers, and roles for authorization.
+  \item Expert in relational databases, including PostgreSQL and PostGIS: SQL DDL and DML, schema design, table triggers, and roles for authorization. PostGIS keeps a WGS84 pose on a GiST index and a circular track history.
   \item Reactive PostgreSQL with libpqxx: event callbacks and JSON objects from the database engine.
   \item Oracle and PL/SQL. Non-relational stores: MongoDB, Redis, Cassandra, Firebase and Kibana.
 \end{itemize}
@@ -326,7 +327,7 @@ Date of birth: 03/05/1991
   \item WebRTC and MediaMTX for video decoding, including RTSP cameras.
   \item Web testing and validation with Selenium and Robot Framework.
   \item Node.js and Node-RED. Service interfaces with REST and SOAP.
-  \item WebSockets to push events to the browser from telemetry and real-time backend processes.
+  \item HTTP/2 (nghttp2) and WSS over the same TLS session, with WebSockets pushing telemetry and real-time events to the browser.
   \item Browser flag tuning and embedded Chromium kiosk browsers for displaying web user interfaces.
   \item Embedded-browser tuning for GPU-accelerated video decoding and correct GPU offload in the browser.
 \end{itemize}
@@ -344,7 +345,7 @@ Date of birth: 03/05/1991
 \begin{itemize}
   \item Cybersecurity: iptables, honeypots, Kali Linux with the Metasploit framework, and forensic analysis.
   \item Parallel and GPU computing with OpenMPI, OpenMP, MapReduce and CUDA.
-  \item Machine learning with metaheuristics, Keras and convolutional networks. ROS navigation with OpenCV and PCL.
+  \item Machine learning with metaheuristics, Keras and convolutional networks, and YOLO on a companion NPU. ROS and ROS~2 navigation and tracking, including a drone, with OpenCV and PCL.
   \item Software testing with SonarQube, GTest and code-coverage measurement. Python, including the C-API.
 \end{itemize}
 
