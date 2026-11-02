@@ -365,6 +365,17 @@ Date of birth: 03/05/1991
 
 English --- intermediate skills, TOEIC certification B1.2
 
+\section{Personal Projects}
+
+\begin{job}{Rescue drone sensor platform}{2026 -- Present}{Personal project, \href{https://github.com/Investigacion-IA/management-sensors}{management-sensors}}
+  \item Search-and-rescue quadcopter: Holybro X500 V2, Cube Orange on ArduPilot, Here4 GNSS, Holybro H-Flow, STL-27L 360$^\circ$ lidar, ArduCam OV9782 global-shutter camera, Orange Pi 5 companion (RK3588S, 6 TOPS NPU) over Wi-Fi 6, and ExpressLRS as the stick link.
+  \item Onboard video and AI: the camera stream is processed with YOLO on the Orange Pi NPU (RKNN). Those person detections feed the rescue tracking loop.
+  \item Robotics on ROS~2 Lyrical: navigation and tracking algorithms that hold station on the person, using the camera bearing and the lidar range. The same node is the field-bus controller on eProsima Fast DDS (Fast-CDR, IDL, Micro XRCE-DDS and OpenSSL mTLS), with H.264 from FFmpeg into a POSIX shared-memory ring, in C++23.
+  \item Quantum-safe management plane: Botan~3 with TLS~v1.3 and hybrid X25519/ML-KEM-768 key exchange (also ML-KEM-1024, and Kyber and FrodoKEM policies), PostgreSQL and PostGIS with libpqxx as a reactive bus (LISTEN/NOTIFY), ES384 JWT, Argon2id and Boost.Asio.
+  \item Operator panel: Next.js~16, React~19 and TypeScript as a static export, Tailwind CSS~4, a MapLibre mission map, live telemetry over WebSocket and video over WebRTC. Three.js and React Three Fiber for the spatial view.
+  \item Build and validation: CMake, colcon, Docker, AArch64 and ARM cross builds, QEMU, GoogleTest, Robot Framework with Selenium, Vitest and GitHub Actions.
+\end{job}
+
 \section{Personal Achievements}
 
 \begin{itemize}
