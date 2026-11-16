@@ -9,3 +9,4 @@
 ![CV, page 5](preview/page-5.png)
 ![CV, page 6](preview/page-6.png)
 ![CV, page 7](preview/page-7.png)
+![CV, page 8](preview/page-8.png)
